@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-force-await-before-async",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An ESLint Plugin that enforce await before all asynchroneous functions",
   "engines": {
     "node": ">=8.10.0"

@@ -26,9 +26,7 @@ function isPromise(expression: any) : boolean {
   )
 }
 
-module.exports = isPromise
-
-const rule: TSESLint.RuleModule<'disallowExample', []> = {
+const rule: TSESLint.RuleModule<'mustAwait', []> = {
   meta: {
     docs: {
       description: 'An example rule.',
@@ -36,20 +34,20 @@ const rule: TSESLint.RuleModule<'disallowExample', []> = {
       url: 'https://github.com/wingstako/eslint-plugin-force-await-before-async/blob/master/docs/rules/force-await-before-async.md',
     },
     messages: {
-      disallowExample: "'example' identifier is forbidden.",
+      mustAwait: "Should await before async",
     },
     schema: [],
     type: 'suggestion',
   },
 
-  create(context) {
+  create: context => {
     return {
       CallExpression(node) {
         if (isPromise(node)) {
           if (node.parent && node.parent.type !== 'AwaitExpression') {
             context.report({
               node,
-              messageId: 'disallowExample',
+              messageId: 'mustAwait',
             });
           }
         }
@@ -59,4 +57,4 @@ const rule: TSESLint.RuleModule<'disallowExample', []> = {
   defaultOptions: []
 };
 
-export = rule;
+export default rule;
