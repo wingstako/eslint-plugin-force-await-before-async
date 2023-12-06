@@ -1,7 +1,7 @@
 {
-  "name": "eslint-plugin-xxxx",
-  "version": "1.0.0",
-  "description": "",
+  "name": "eslint-plugin-force-await-before-async",
+  "version": "0.0.1",
+  "description": "An ESLint Plugin that enforce await before all asynchroneous functions",
   "engines": {
     "node": ">=8.10.0"
   },
@@ -32,21 +32,22 @@
     "eslint": ">=5.16.0"
   },
   "dependencies": {
-    "@typescript-eslint/experimental-utils": "^4.20.0"
+    "@typescript-eslint/utils": "^5.62.0"
   },
   "devDependencies": {
-    "@types/eslint": "^7.2.8",
-    "@types/jest": "^26.0.22",
-    "@typescript-eslint/eslint-plugin": "^4.20.0",
-    "@typescript-eslint/parser": "^4.20.0",
-    "eslint": "^7.23.0",
+    "@types/eslint": "^8.44.8",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^20.10.3",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "eslint": "8.31.0",
     "husky": "^6.0.0",
     "jest": "^26.6.3",
     "lint-staged": "^10.5.4",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.2.1",
+    "prettier": "^2.8.8",
     "rimraf": "^3.0.2",
-    "ts-jest": "^26.5.4",
+    "ts-jest": "^26.5.6",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3"
   },
@@ -59,21 +60,11 @@
       "prettier --write"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/???/eslint-plugin-xxxx.git"
-  },
   "keywords": [
     "typescript",
     "template",
     "eslint",
     "eslintplugin",
     "eslint-plugin"
-  ],
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/???/eslint-plugin-xxxx/issues"
-  },
-  "homepage": "https://github.com/???/eslint-plugin-xxxx#readme"
+  ]
 }

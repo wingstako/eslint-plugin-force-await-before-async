@@ -6,6 +6,6 @@ export = {
     recommended: import('./configs/recommended'),
   },
   rules: {
-    'example-rule': import('./rules/example-rule'),
+    'force-await-before-async': import('./rules/force-await-before-async'),
   },
 };
